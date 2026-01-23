@@ -25,9 +25,12 @@ public class WeeklyData  {
      * @param input an array representing 7 days of data
      */
     public WeeklyData(double[] input) {
-        double[] copyInput = new double[input.length];
+        if (input == null) {
+            throw new IllegalArgumentException("Input array cannot be null");
+        }
+        this.weekData = new double[input.length];
         for (int i = 0; i < input.length; i++) {
-            copyInput[i] = input[i];
+            this.weekData[i] = input[i];
         }
         // TODO: (Optional) Check if input is null and handle appropriately
         // TODO: Create a new array with the same length as input
@@ -49,7 +52,7 @@ public class WeeklyData  {
         // TODO: Use a loop to add each value in the array to the total
         // TODO: Return the total
         double total = 0.0;
-        for (int i = 0; i < weekData.length; i++) {
+        for (int i = 0; i < 7; i++) {
             total += weekData[i];
         }
         return total; // replace with your calculated total
