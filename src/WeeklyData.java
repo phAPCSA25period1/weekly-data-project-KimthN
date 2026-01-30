@@ -5,19 +5,12 @@
  */
 public class WeeklyData  {
 
-    // -------------------------------------------------------------
-    // Instance Variables
-    // -------------------------------------------------------------
-    // TODO: Declare a private array to store the week’s data
-    //       Choose an appropriate type (double[] or int[])
-    //       Create other instance variables as necessary
+    
     private double[] weekData;
     
 
 
-    // -------------------------------------------------------------
-    // Constructor
-    // -------------------------------------------------------------
+    
     /**
      * Constructs a WeeklyData object by taking in an array of values
      * and making a deep copy (element-by-element) into the internal array.
@@ -28,20 +21,16 @@ public class WeeklyData  {
         if (input == null) {
             throw new IllegalArgumentException("Input array cannot be null");
         }
-        this.weekData = new double[input.length];
+        weekData = new double[input.length];
         for (int i = 0; i < input.length; i++) {
-            this.weekData[i] = input[i];
+            weekData[i] = input[i];
         }
-        // TODO: (Optional) Check if input is null and handle appropriately
-        // TODO: Create a new array with the same length as input
-        // TODO: Copy each value from input into the internal data array
-        // NOTE: Do NOT do this.data = input; (that would create aliasing)
-    }
+        
+        }
+        
 
 
-    // -------------------------------------------------------------
-    // getTotal
-    // -------------------------------------------------------------
+    
     /**
      * Calculates and returns the total of all values in the week.
      *
@@ -59,9 +48,7 @@ public class WeeklyData  {
     }
 
 
-    // -------------------------------------------------------------
-    // getAverage
-    // -------------------------------------------------------------
+    
     /**
      * Calculates and returns the average value for the week.
      *
@@ -77,13 +64,11 @@ public class WeeklyData  {
         } else {
             return getTotal() / weekData.length;
         }
-        //return 0.0; // replace with your calculated average
+        
     }
 
 
-    // -------------------------------------------------------------
-    // getMax
-    // -------------------------------------------------------------
+    
     /**
      * Finds and returns the highest value in the data array.
      *
@@ -103,9 +88,7 @@ public class WeeklyData  {
     }
 
 
-    // -------------------------------------------------------------
-    // getMin
-    // -------------------------------------------------------------
+    
     /**
      * Finds and returns the lowest value in the data array.
      *
@@ -125,9 +108,7 @@ public class WeeklyData  {
     }
 
 
-    // -------------------------------------------------------------
-    // toString
-    // -------------------------------------------------------------
+    
     /**
      * Returns a formatted, multi-line String showing each day’s data.
      *
@@ -150,6 +131,6 @@ public class WeeklyData  {
             dayEntry += "Day " + String.valueOf(i + 1) + ": " + String.valueOf(weekData[i]) + "\n";
         }
         return dayEntry;
-        //return ""; // replace with your formatted output
+        
     }
 }
